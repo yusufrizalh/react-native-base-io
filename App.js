@@ -119,7 +119,7 @@ class App extends Component {
 
             <CardItem button onPress={() => Alert.alert("Menekan Card Item")}>
               <Body>
-                <Image source={require('./village.png')}
+                <Image source={require('./flatlay.jpg')}
                   style={{flex: 1, width: 360, height: 160}} />
                 <Text>
                   Lorem ipsum dolor sit amet, 
