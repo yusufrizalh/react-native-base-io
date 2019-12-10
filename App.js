@@ -23,7 +23,7 @@ import {
   ScrollView,
   View,
   StatusBar,
-  Image, Alert
+  Image, Alert 
 } from 'react-native';
 
 import {
@@ -35,8 +35,8 @@ import {
 
 // import component from native-base 
 import {Container, 
-  Header, 
-  Button, 
+  Header, Title, Left, Right, 
+  Button, FooterTab, Footer, 
   Content, 
   Text, Root, Icon, 
   ActionSheet, Thumbnail, 
@@ -59,14 +59,18 @@ class App extends Component {
 
   render() {
     return(
-      // <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
-      //   <Text style={{fontSize: 28}}>
-      //     Learn Native Base
-      //   </Text>
-      // </View>
       <Root>
       <Container>
-        <Header />
+      <Header>
+          <Left primary>
+            <Icon name='home' style={{color: 'white'}} />
+          </Left>
+          <Body>
+            <Title>Learn Native Base</Title>
+          </Body>
+          {/* <Right></Right> */}
+        </Header>
+      <ScrollView>
         <Content padder>
           <Button bordered iconRight primary 
             onPress={ () => 
@@ -86,7 +90,7 @@ class App extends Component {
           </Button>
 
           {/* Card */}
-          {/* <Card>
+          <Card>
             <CardItem header>
               <Text>Card Header</Text>
             </CardItem>
@@ -103,16 +107,54 @@ class App extends Component {
                   Integer tincidunt quam nec nisi varius, sit.
                 </Text>                
               </Body>
-              
             </CardItem>
-
             <CardItem footer>
               <Text>Card Footer</Text>
             </CardItem>
-          </Card> */}
+          </Card>
+          <Card>
+            <CardItem header>
+              <Text>Card Header</Text>
+            </CardItem>
+
+            <CardItem button onPress={() => Alert.alert("Menekan Card Item")}>
+              <Body>
+                <Image source={require('./village.png')}
+                  style={{flex: 1, width: 360, height: 160}} />
+                <Text>
+                  Lorem ipsum dolor sit amet, 
+                  consectetur adipiscing elit. 
+                  Proin elementum finibus neque ut viverra. 
+                  Curabitur sed efficitur est. 
+                  Integer tincidunt quam nec nisi varius, sit.
+                </Text>                
+              </Body>
+            </CardItem>
+            <CardItem footer>
+              <Text>Card Footer</Text>
+            </CardItem>
+          </Card>
+
           <ValidateForm />
+
         </Content>
-        
+        </ScrollView>
+        <Footer>
+          <FooterTab>
+            <Button active vertical>
+              <Icon name='home' />
+              <Text>Home</Text>
+            </Button>
+            <Button vertical>
+              <Icon name='photos' />
+              <Text>Gallery</Text>
+            </Button>
+            <Button vertical>
+              <Icon name='contact' />
+              <Text>Contact</Text>
+            </Button>
+          </FooterTab>
+        </Footer>
       </Container>
       </Root>
     );

@@ -93,8 +93,8 @@ const styles = StyleSheet.create({
     justifyContent: "center"
   },
   button: {
-    backgroundColor: "green",
-    paddingHorizontal: 40,
+    backgroundColor: "blue",
+    paddingHorizontal: 160,
     paddingVertical: 10,
     borderRadius: 5,
     marginTop: 20
@@ -105,6 +105,7 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 1,
     padding: 5,
+    paddingHorizontal: 16,
     margin: 20,
     marginBottom: 0,
   }
