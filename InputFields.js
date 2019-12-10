@@ -6,6 +6,8 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable no-trailing-spaces */
 /* eslint-disable no-unused-vars */
+
+
 import React, {Component} from 'react';
 import {Text, View, TextInput} from 'react-native';
 

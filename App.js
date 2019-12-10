@@ -43,13 +43,14 @@ import {Container,
   Card, CardItem, Body} from "native-base";
 
 import InputFields from './InputFields';
+import ValidateForm from './ValidateForm';
 
   // opsi-opsi dalam button action sheet 
   var OPSI = ["Opsi 1", "Opsi 2", "Opsi 3", "Hapus", "Cancel"];
   var HAPUS_INDEX = 3;
   var CANCEL_INDEX = 4;
 
-export default class App extends Component {
+class App extends Component {
   constructor(props) {
     super(props);
     // nilai awal belum ada opsi yg dipilih 
@@ -109,7 +110,7 @@ export default class App extends Component {
               <Text>Card Footer</Text>
             </CardItem>
           </Card> */}
-          <InputFields />
+          <ValidateForm />
         </Content>
         
       </Container>
@@ -117,3 +118,5 @@ export default class App extends Component {
     );
   }
 }
+
+export default App;
